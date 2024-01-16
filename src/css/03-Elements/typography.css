@@ -1,0 +1,87 @@
+body {
+  font-family: var(--fontFamily--body);
+  font-size: var(--fontSize--body);
+  font-weight: var(--fontWeight--body);
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontFamily--heading);
+  font-weight: var(--fontWeight--heading);
+  line-height: 1.1;
+  margin-block-start: 0.75em;
+  margin-block-end: 0.4em;
+}
+
+h1,
+.fontSize-h1 {
+  font-size: var(--fontSize--h1);
+}
+
+h2,
+.fontSize-h2 {
+  font-size: var(--fontSize--h2);
+}
+
+h3,
+.fontSize-h3 {
+  font-size: var(--fontSize--h3);
+}
+
+h4,
+.fontSize-h4 {
+  font-size: var(--fontSize--h4);
+}
+
+h5,
+.fontSize-h5 {
+  font-size: var(--fontSize--h5);
+}
+
+h6,
+.fontSize-h6 {
+  font-size: var(--fontSize--h6);
+}
+
+p {
+  font-family: var(--fontFamily--body);
+  font-weight: var(--fontWeight--body);
+}
+
+p {
+  margin-block-end: 1.25em;
+}
+
+a {
+  font-family: var(--fontFamily--body);
+  color: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  text-decoration: underline;
+}
+
+/* Faux Bold */
+strong,
+b {
+  font-weight: 700;
+}
+
+/* Faux Italic */
+em,
+i {
+  font-style: italic;
+}
+
+figcaption {
+  font-family: var(--fontFamily--heading);
+  font-size: var(--fontSize--caption);
+  font-weight: var(--fontWeight--heading);
+  color: inherit;
+  line-height: 1.25;
+  margin-block-start: 0.75em;
+}

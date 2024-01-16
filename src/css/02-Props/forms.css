@@ -1,0 +1,53 @@
+:root {
+  /* Form */
+  --form--color: var(--color--smokyBlack);
+  --form--backgroundColor: transparent;
+  --form--padding: 0;
+  --form--lineHeight: 1.25;
+  --form--borderRadius: 0;
+
+  /* Fieldset */
+  --fieldset--borderWidth: 0.125rem;
+  --fieldset--borderStyle: solid;
+  --fieldset--borderColor: var(--color--smokyBlack-T20);
+  --fieldset--borderRadius: 0.5rem;
+  --fieldset--borderRadius--outer: var(--form-border-radius);
+  --fieldset--borderRadius--inner: var(--form-border-radius);
+  --fieldset--backgroundColor: transparent;
+  --fieldset--padding: 1rem;
+
+  /* Legend */
+  --legend--color: var(--color--smokyBlack);
+  --legend--fontSize: var(--font-size-h6);
+  --legend--insetBlockStart: 1rem;
+
+  /* Label */
+  --label--color: var(--color--smokyBlack-T70);
+  --label--fontSize: var(--font-size-h6);
+  --label--marginBlockStart: 1rem;
+  --label--marginBlockEnd: 0.35rem;
+
+  /* Input */
+  --input--color--primary: var(--color--smokyBlack);
+  --input--color--secondary: var(--color--smokyBlack-T70);
+
+  --input--backgroundColor--primary: var(--color--seaShell);
+  --input--backgroundColor--secondary: var(--color--smokyBlack-10);
+
+  --input--borderWidth: 0.125rem;
+  --input--borderStyle: solid;
+  --input--borderColor: var(--color--smokyBlack-T20);
+  --input--borderRadius: 0.5rem;
+
+  --input--active--color: var(--color--smokyBlack);
+  --input--active--borderColor: var(--color--smokyBlack-T70);
+
+  --input--disabled--color: var(--text-disabled);
+  --input--disabled--backgroundColor: var(--color--smokyBlack-10);
+  --input--disabled--borderColor: var(--color--smokyBlack-T20);
+
+  --input--invalid--borderColor: var(--color--coral);
+
+  --input--maxWidth: 27rem;
+  --input--backgroundImage: none;
+}

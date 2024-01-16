@@ -1,0 +1,27 @@
+:root {
+  --maxWidth--XXL: 106rem;
+
+  /* Imutable for mobile, where we don't want it to grow ever */
+  --site--outer--padding--inmutable: 16px;
+
+  /* Fluid padding above 360px fluid 360-1920px */
+  --site--outer--padding--fluid: clamp(1rem, -0.269rem + 5.64vw, 6.5rem);
+
+  --centerGrid: [full-start] minmax(var(--site--outer--padding), 1fr)
+    [main-start] minmax(0, var(--maxWidth--XXL))
+    [main-end]minmax(var(--site--outer--padding), 1fr) [full-end];
+}
+
+/* Screen below 780 */
+@media (min-width: 0) and (max-width: 47.98rem) {
+  :root {
+    --site--outer--padding: var(--site--outer--padding--inmutable);
+  }
+}
+
+/* Screen above 780 */
+@media (min-width: 48rem) {
+  :root {
+    --site--outer--padding: var(--site--outer--padding--fluid);
+  }
+}

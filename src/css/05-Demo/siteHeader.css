@@ -1,0 +1,11 @@
+.siteHeader {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  background-color: var(--color--N05, darkGreen);
+  border-block-end: 0.125rem solid var(--color--smokyBlack-T70, lime);
+
+  & p {
+    font-size: x-large;
+    font-weight: bold;
+  }
+}

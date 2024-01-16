@@ -1,0 +1,23 @@
+:root {
+  /* Define color scales */
+  --color--N00: #ffffff;
+  --color--N05: #f6f6f2;
+  --color--N10: #ebebe8;
+  --color--N20: #d3d3d1;
+  --color--N30: #b8b7b7;
+  --color--N40: #949596;
+  --color--N50: #76767a;
+  --color--N60: #68686d;
+  --color--N70: #505056;
+  --color--N80: #3b3c42;
+  --color--N90: #26262b;
+
+  /* Define named colors */
+  --color--seaShell: var(--color--N05);
+  --color--smokyBlack: var(--color--N90);
+  --color--coral: hsl(16, 100%, 66%);
+
+  /* Theme Color Variations */
+  --color--smokyBlack-T20: hsla(240, 6%, 16%, 0.2);
+  --color--smokyBlack-T70: hsla(240, 6%, 16%, 0.7);
+}

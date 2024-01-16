@@ -1,0 +1,46 @@
+:root {
+  /* DEFAULT BUTTON (No classes -> Defaults to btnSecondary style) */
+  --button--color: var(--color--smokyBlack);
+  --button--backgroundColor: transparent;
+  --button--borderColor: currentColor;
+  --button--textDecorationColor: transparent;
+  --button--hover--textDecorationColor: var(--color--smokyBlack-T20);
+  --button--focus--outlineColor: var(--color--smokyBlack);
+
+  /* PRIMARY BUTTON (.btnPrimary) */
+  --btnPrimary--color: var(--color--seaShell);
+  --btnPrimary--backgroundColor: var(--color--smokyBlack);
+  --btnPrimary--borderColor: var(--color--smokyBlack);
+  --btnPrimary--hover--textDecorationColor: transparent;
+
+  /* SECONDARY BUTTON (.btnSecondary) */
+  --btnSecondary--color: var(--color--smokyBlack);
+  --btnSecondary--backgroundColor: transparent;
+  --btnSecondary--borderColor: currentColor;
+  --btnSecondary--hover--textDecorationColor: var(--color--smokyBlack-T20);
+
+  /* BUTTON SMALL (.btnSmall) */
+  --btnSmall--fontSize--mobile: 1rem; /* 16px */
+  --btnSmall--fontSize--desktop: 1rem; /* 16px */
+
+  /* BUTTON SMALL (.btnLarge) */
+  --btnLarge--fontSize--mobile: 1.125rem; /* 18px */
+  --btnLarge--fontSize--desktop: 1.25rem; /* 20px */
+}
+
+/* FONT SIZES MOBILE (screen below 780px) */
+@media (max-width: 48.74rem) {
+  :root {
+    /* Button sizes */
+    --btnSmall--fontSize: var(--btnSmall--fontSize--mobile);
+    --btnLarge--fontSize: var(--btnLarge--fontSize--mobile);
+  }
+}
+
+/* FONT SIZES DESKTOP (screen above 780px) */
+@media (min-width: 48.75rem) {
+  :root {
+    --btnSmall--fontSize: var(--btnSmall--fontSize--desktop);
+    --btnLarge--fontSize: var(--btnLarge--fontSize--desktop);
+  }
+}

@@ -1,0 +1,365 @@
+/* input elements */
+
+form {
+  color: var(--form--color);
+  padding: var(--form--padding);
+  background-color: var(--form--backgroundColor);
+  line-height: var(--form--lineHeight);
+  border-radius: var(--form--borderRadius);
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  color: var(--label--color);
+  font-family: var(--fontFamily--heading);
+  font-size: var(--label--fontSize);
+  font-weight: var(--fontWeight--heading);
+  line-height: 1;
+  margin-block-end: var(--label--marginBlockEnd);
+  margin-inline-end: 0.5rem;
+  user-select: none;
+}
+
+fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-width: var(--fieldset--borderWidth);
+  border-style: var(--fieldset--borderStyle);
+  border-color: var(--fieldset--borderColor);
+  border-radius: var(--fieldset--borderRadius);
+  background-color: var(--fieldset--backgroundColor);
+  padding: var(--fieldset--padding);
+  margin-block-end: 1rem;
+  margin-block-start: calc(
+    var(--legend--fontSize) + var(--label--marginBlockEnd) +
+      var(--input--borderWidth) + 1rem
+  );
+}
+
+legend {
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--legend--color);
+  font-family: var(--fontFamily--heading);
+  font-size: var(--legend--fontSize);
+  inset-block-start: calc(
+    (
+        var(--legend--fontSize) + var(--label--marginBlockEnd) +
+          var(--fieldset--borderWidth)
+      ) * -1
+  );
+  font-weight: var(--fontWeight--heading);
+  line-height: 1;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: var(--input--maxWidth);
+  margin-block-end: 1rem;
+}
+
+input:not(textarea),
+select {
+  line-height: 1;
+  /*   height: 2.75rem; */
+}
+
+:is(
+    input:not([type]),
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="tel-national"],
+    input[type="url"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"]
+  ),
+select,
+textarea {
+  position: relative;
+  display: block;
+  background-color: var(--input--backgroundColor--primary);
+  width: 100%;
+  max-width: var(--input--maxWidth);
+  padding-inline: 0.88rem;
+  padding-block: 0.62rem;
+  color: var(--input--color--primary);
+  font-family: var(--fontFamily--heading);
+  font-size: var(--font-size-h6);
+  font-weight: var(--fontWeight--heading);
+  border-width: var(--input--borderWidth);
+  border-style: var(--input--borderStyle);
+  border-color: var(--input--borderColor);
+  border-radius: var(--input--borderRadius);
+  margin-block-end: 1rem;
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: currentColor;
+  }
+
+  &::placeholder {
+    color: var(--input--color--secondary);
+  }
+
+  &:disabled {
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-position: end 1rem center;
+    background-size: 1.5rem;
+    background-image: var(--input--backgroundImage--disabled);
+    /* Make sure the text & icon don't stack */
+    padding-inline-end: 3rem;
+    cursor: not-allowed;
+  }
+}
+
+input[type="search"] {
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-position: end 1rem center;
+  background-size: 1.5rem;
+  background-image: var(--input--backgroundImage--search);
+  /* Make sure the text & icon don't stack */
+  padding-inline-end: 3rem;
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-clear-button {
+    display: none;
+  }
+}
+
+input[type="file"] {
+  font-size: 1rem;
+  color: var(--input--color--primary);
+  padding-inline: 0.88rem;
+  padding-block: 0.62rem;
+  width: 100%;
+  background-color: var(--input--backgroundColor--primary);
+  border-width: var(--input--borderWidth);
+  border-style: var(--input--borderStyle);
+  border-color: var(--input--borderColor);
+  border-radius: var(--input--borderRadius);
+  cursor: pointer;
+
+  &::file-selector-button {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    color: var(--input--color--primary);
+    border-color: currentrColor;
+    border-radius: 0.25rem;
+    padding-inline: 0.5rem;
+    margin-inline-end: 0.5rem;
+    pointer-events: none;
+  }
+}
+
+input[type="range"] {
+  --_range-height: 0.3125rem; /* 5px */
+  --_thumb-size: 0.625rem; /* 10px */
+
+  margin-block-end: 1rem;
+  margin-block-start: 1rem;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  height: var(--_range-height);
+  background-color: var(--input--borderColor);
+  border-radius: var(--_range-height);
+  outline-offset: 10px;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid var(--input--borderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    border: 2px solid var(--input--borderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  &::-ms-thumb {
+    border: 2px solid var(--input--borderColor);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
+
+input[type="color"] {
+  display: inline-block;
+  width: 5rem;
+  height: 2rem;
+  background-color: var(--input--backgroundColor--primary);
+}
+
+input[type="radio"] {
+  --_width: 1.25rem;
+  --_height: 1.25rem;
+
+  display: inline-block;
+  position: relative;
+  appearance: none;
+  height: var(--_height);
+  width: var(--_width);
+  vertical-align: middle;
+  margin-block-end: var(--label--marginBlockEnd);
+  margin-inline-end: 0.5rem;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: var(--_width);
+    height: var(--_height);
+    border-style: solid;
+    border-width: var(--input--borderWidth);
+    border-color: var(--input--borderColor);
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &:checked::before {
+  }
+
+  &:checked::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--input--color--primary);
+    inset-inline-start: calc((var(--_width) - 0.5rem) / 2);
+    inset-block-start: calc((var(--_height) - 0.5rem) / 2);
+  }
+
+  &:disabled::before {
+  }
+
+  &:disabled:checked::before {
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none; /* Remove default focus outline for mouse interaction */
+    /* Add any other styles you want to apply when focused by mouse */
+  }
+
+  &:focus-visible::before {
+    border-color: var(--input--color--primary);
+  }
+}
+
+input[type="checkbox"] {
+  --_width: 1.25rem;
+  --_height: 1.25rem;
+
+  position: relative;
+  appearance: none;
+  display: inline-block;
+  height: var(--_height);
+  width: var(--_width);
+  vertical-align: middle;
+  margin-block-end: var(--label--marginBlockEnd);
+  margin-inline-end: 0.5rem;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: var(--_width);
+    height: var(--_height);
+    border-style: solid;
+    border-width: var(--input--borderWidth);
+    border-color: var(--input--borderColor);
+    border-radius: 0.25rem;
+    background-color: transparent;
+    margin-right: 0.25rem;
+    transition: background-color 0.3s ease-in-out,
+      background-image 0.3s ease-in-out;
+  }
+
+  &:checked::before {
+    background-color: transparent;
+  }
+
+  &:checked::before {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.4rem;
+    background-image: var(--input--backgroundImage--checkmark);
+  }
+
+  &:disabled::before {
+  }
+
+  &:disabled:checked::before {
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    border-color: var(--input--color--primary);
+  }
+}
+
+select {
+  /* Remove default arrow */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* add our own arrow */
+  background-repeat: no-repeat;
+  background-position: right 1rem center; /* Fallback */
+  background-position: inline-end 1rem center;
+  background-size: 1.5rem;
+  background-image: var(--input--backgroundImage--chevronDown);
+  /* Make sure the text & icon don't stack */
+  padding-inline-end: 3rem;
+}
+
+textarea {
+  line-height: 1.25;
+  width: 100%;
+  max-width: var(--input--maxWidth);
+  resize: vertical;
+}

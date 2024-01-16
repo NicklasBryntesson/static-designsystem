@@ -1,0 +1,8 @@
+/* Import TT_Hoves_Pro_Regular.woff2 from public/fonts */
+@font-face {
+  font-family: "TT Hoves Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/TT_Hoves_Pro_Regular.woff2") format("woff2");
+  font-display: swap;
+}

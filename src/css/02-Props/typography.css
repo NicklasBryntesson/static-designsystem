@@ -1,0 +1,60 @@
+:root {
+  /* Theme Fonts */
+  --fontFamily--body: "Georgia", "Times New Roman", Times, serif;
+  --fontFamily--heading: "TT Hoves Pro", BlinkMacSystemFont, -apple-system,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+
+  --fontWeight--body: 400;
+  --fontWeight--heading: 400;
+
+  /* Mobile body sizes */
+  --fontSize--body--mobile: 1.125rem; /* 18px */
+
+  /* Desktop body sizes */
+  --fontSize--body--desktop: 1.25rem; /* 20px */
+
+  /* Mobile heading sizes: */
+  --fontSize--h1--mobile: 2.75rem; /* 44px */
+  --fontSize--h2--mobile: 2.25rem; /* 36px */
+  --fontSize--h3--mobile: 1.75rem; /* 28px */
+  --fontSize--h4--mobile: 1.375rem; /* 22px */
+  --fontSize--h5--mobile: 1.125rem; /* 18px */
+  --fontSize--h6--mobile: 1rem; /* 16px */
+
+  /* Desktop heading sizes: */
+  --fontSize--h1--desktop: 3.5rem; /* 56px */
+  --fontSize--h2--desktop: 2.5rem; /* 40px */
+  --fontSize--h3--desktop: 2rem; /* 32px */
+  --fontSize--h4--desktop: 1.5rem; /* 24px */
+  --fontSize--h5--desktop: 1.125rem; /* 18px */
+  --fontSize--h6--desktop: 1rem; /* 16px */
+}
+
+/* Mobile Font sizes - Screen below 780 */
+@media (max-width: 48.74rem) {
+  :root {
+    --fontSize--body: var(--fontSize--body--mobile);
+
+    --fontSize--h1: var(--fontSize--h1--mobile);
+    --fontSize--h2: var(--fontSize--h2--mobile);
+    --fontSize--h3: var(--fontSize--h3--mobile);
+    --fontSize--h4: var(--fontSize--h4--mobile);
+    --fontSize--h5: var(--fontSize--h5--mobile);
+    --fontSize--h6: var(--fontSize--h6--mobile);
+  }
+}
+
+/* Desktop Font sizes - Screen above 780 */
+@media (min-width: 48.75rem) {
+  :root {
+    --fontSize--body: var(--fontSize--body--desktop);
+
+    --fontSize--h1: var(--fontSize--h1--desktop);
+    --fontSize--h2: var(--fontSize--h2--desktop);
+    --fontSize--h3: var(--fontSize--h3--desktop);
+    --fontSize--h4: var(--fontSize--h4--desktop);
+    --fontSize--h5: var(--fontSize--h5--desktop);
+    --fontSize--h6: var(--fontSize--h6--desktop);
+  }
+}

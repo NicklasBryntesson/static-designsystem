@@ -1,0 +1,12 @@
+.siteFooter {
+  margin-block-start: auto;
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  background-color: var(--color--N05, fuchsia);
+  border-block-start: 0.125rem solid var(--color--smokyBlack-T70, rebeccaPurple);
+
+  & p {
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
