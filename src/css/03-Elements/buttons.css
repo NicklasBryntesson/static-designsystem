@@ -1,8 +1,8 @@
 /* Buttons without classes -> Defaults to btnSecondary style */
 button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
 .btn {
   /* Button default layout */
   display: inline-grid;
@@ -66,8 +66,8 @@ input[type="reset"],
 }
 
 /* Submit buttons should be primary unless overriden with .btnSecondary */
-button[type="submit"],
-input[type="submit"] {
+button[type='submit'],
+input[type='submit'] {
   color: var(--btnPrimary--color);
   background-color: var(--btnPrimary--backgroundColor);
   border-color: var(--btnPrimary--borderColor);
@@ -78,10 +78,10 @@ input[type="submit"] {
   }
 }
 
-button[type="submit"].btnSmall,
-input[type="button"].btnSmall,
-input[type="submit"].btnSmall,
-input[type="reset"].btnSmall,
+button[type='submit'].btnSmall,
+input[type='button'].btnSmall,
+input[type='submit'].btnSmall,
+input[type='reset'].btnSmall,
 .btnSmall {
   padding-inline: 1em;
   padding-block: 0.5rem;
@@ -93,10 +93,10 @@ input[type="reset"].btnSmall,
   }
 }
 
-button[type="submit"].btnLarge,
-input[type="button"].btnLarge,
-input[type="submit"].btnLarge,
-input[type="reset"].btnLarge,
+button[type='submit'].btnLarge,
+input[type='button'].btnLarge,
+input[type='submit'].btnLarge,
+input[type='reset'].btnLarge,
 .btnLarge {
   padding-inline: 1.2em;
   padding-block: 0.85em;
@@ -110,10 +110,10 @@ input[type="reset"].btnLarge,
   }
 }
 
-button[type="submit"].btnPrimary,
-input[type="button"].btnPrimary,
-input[type="submit"].btnPrimary,
-input[type="reset"].btnPrimary,
+button[type='submit'].btnPrimary,
+input[type='button'].btnPrimary,
+input[type='submit'].btnPrimary,
+input[type='reset'].btnPrimary,
 .btnPrimary {
   color: var(--btnPrimary--color);
   background-color: var(--btnPrimary--backgroundColor);
@@ -125,10 +125,10 @@ input[type="reset"].btnPrimary,
   }
 }
 
-button[type="submit"].btnSecondary,
-input[type="button"].btnSecondary,
-input[type="submit"].btnSecondary,
-input[type="reset"].btnSecondary,
+button[type='submit'].btnSecondary,
+input[type='button'].btnSecondary,
+input[type='submit'].btnSecondary,
+input[type='reset'].btnSecondary,
 .btnSecondary {
   color: var(--btnSecondary--color);
   background-color: var(--btnSecondary--backgroundColor);

@@ -1,9 +1,9 @@
 :root {
   /* Theme Fonts */
-  --fontFamily--body: "Georgia", "Times New Roman", Times, serif;
-  --fontFamily--heading: "TT Hoves Pro", BlinkMacSystemFont, -apple-system,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  --fontFamily--body: 'Georgia', 'Times New Roman', Times, serif;
+  --fontFamily--heading: 'TT Hoves Pro', BlinkMacSystemFont, -apple-system,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
 
   --fontWeight--body: 400;
   --fontWeight--heading: 400;

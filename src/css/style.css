@@ -1,6 +1,4 @@
-@import "01-Setup/normalize.css";
 @import "01-Setup/reset.css";
-@import "01-Setup/fonts.css";
 
 @import "02-Props/colors.css";
 @import "02-Props/typography.css";
@@ -12,8 +10,3 @@
 @import "03-Elements/forms.css";
 
 @import "04-Utility/forms.css";
-
-/* Demo styles */
-@import "05-Demo/siteHeader.css";
-@import "05-Demo/siteMain.css";
-@import "05-Demo/siteFooter.css";

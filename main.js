@@ -1,3 +1,7 @@
-import './src/js/script.js';
+import "./src/js/script.js";
 
-import './src/css/style.css';
+import "./src/css/style.css";
+
+import "./examples/js/script.js";
+
+import "./examples/css/style.css";
