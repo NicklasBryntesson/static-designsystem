@@ -4,12 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "files": [
-    "dist/**/*"
+    "designsystem/**/*"
   ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "format": "prettier --write \"src/**/*.{json,js,css,scss,html}\"",
+    "build:npm": "vite build --config vite.config.npm.js",
+    "format": "prettier --write \"src/**/*.{json,js,css,html}\"",
     "preview": "vite preview"
   },
   "devDependencies": {
