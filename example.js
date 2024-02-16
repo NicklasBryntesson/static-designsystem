@@ -1,6 +1,6 @@
 import "./src/js/script.js";
 
-import "./src/css/style.css";
+import "./src/css/designsystem.css";
 
 import "./examples/js/script.js";
 

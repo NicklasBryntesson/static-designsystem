@@ -1,4 +1,3 @@
-// vite.config.npm.js
 import { defineConfig } from "vite";
 import autoprefixer from "autoprefixer";
 import path from "path";
@@ -9,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "designsystem.js"),
       name: "DesignSystem",
-      fileName: (format) => `designsystem.${format}.js`,
+      fileName: "designsystem",
     },
   },
   css: {
@@ -18,4 +17,5 @@ export default defineConfig({
     },
   },
   plugins: [],
+  publicDir: false,
 });

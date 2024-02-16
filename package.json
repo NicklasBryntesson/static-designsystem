@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:npm": "vite build --config vite.config.npm.js",
+    "build:npm": "vite build --config vite.config.npm.js && npm run rename-css",
+    "rename-css": "node rename-css.js",
     "format": "prettier --write \"src/**/*.{json,js,css,html}\"",
     "preview": "vite preview"
   },
